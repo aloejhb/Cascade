@@ -7,12 +7,12 @@ setup(
     author="Peter Rupprecht",
     author_email="",
     packages=find_packages(),
-    python_requires=">=3.7, <=3.13",
+    python_requires=">=3.7, <=3.12",
     install_requires=[
         "numpy",
         "scipy",
         "matplotlib",
-        "tensorflow>=2.3, <=2.15",  # pip install CPU and GPU tensorflow
+        "tensorflow>=2.3, <=2.19",  # pip install CPU and GPU tensorflow
         "keras",
         "h5py",
         "seaborn",
