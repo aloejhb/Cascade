@@ -469,7 +469,8 @@ def transfer_train_model(
 
 
 def predict(
-    model_name, traces, model_folder="Pretrained_models", threshold=0, padding=np.nan, verbosity=1
+    model_name, traces, 
+    model_folder="Pretrained_models", threshold=0, padding=np.nan, verbosity=1, trace_noise_levels=None
 ):
 
     """Use a specific trained neural network ('model_name') to predict spiking activity for calcium traces ('traces')
@@ -598,8 +599,10 @@ def predict(
             )
         )
 
-    # calculate noise levels for each trace
-    trace_noise_levels = utils.calculate_noise_levels(traces, sampling_rate)
+    if trace_noise_levels is None:
+        # calculate noise levels for each trace
+        trace_noise_levels = utils.calculate_noise_levels(traces, sampling_rate)
+
 
     if verbose:
         print(
