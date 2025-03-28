@@ -7,7 +7,7 @@ setup(
     author="Peter Rupprecht",
     author_email="",
     packages=find_packages(),
-    python_requires=">=3.7, <=3.12",
+    python_requires=">=3.7, <3.13",
     install_requires=[
         "numpy",
         "scipy",
