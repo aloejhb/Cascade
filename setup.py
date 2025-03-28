@@ -17,6 +17,5 @@ setup(
         "h5py",
         "seaborn",
         "ruamel.yaml",
-        "spyder",
     ],
 )
